@@ -18,12 +18,14 @@ $(document).ready(function() {
           // hendlebars template
           var icon = '<i class="fas fa-star"></i>'
           var numeroStelle = parseInt(data.results[i].vote_average / 2);
+          var lingua = data.results[i].original_language;
+
           var source = document.getElementById("cardTemplate").innerHTML;
           var template = Handlebars.compile(source);
           var context = {
             movieOrigTitle: data.results[i].original_title,
             movieTitle: data.results[i].title,
-            lingua: data.results[i].original_language,
+            lingua: lingua,
             voto: data.results[i].vote_average,
             stelle: numeroStelle,
             foto: 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + data.results[i].backdrop_path

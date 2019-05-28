@@ -13,10 +13,12 @@ h3 {
   font-size: 0.75em
 }
 .container {
-  height: 100vh;
+  height: 70vh;
   width: 100vw;
     padding: 15% 1%;
   background-image: url('https://cache.desktopnexus.com/cropped-wallpapers/2188/2188719-1920x1080-[DesktopNexus.com].jpg?st=qTVm-jFk24DtoZ_Q1fQ24A&e=1559034788');
+      max-width: 100%;
+
 }
 .search-box {
   background-color: rgba(0, 0, 0, 0.74);
@@ -25,6 +27,9 @@ h3 {
   margin: auto;
   padding: 83px 69px;
 
+}
+.navbar {
+  padding: 20px 100px;
 }
 #searchBox {
   width: 70%;
@@ -52,4 +57,7 @@ color: dimgray;
 }
 .moviePoster {
   width: 100%;
+}
+.flagIcon {
+  width: 20px;
 }
