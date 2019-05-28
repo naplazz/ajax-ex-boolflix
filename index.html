@@ -29,19 +29,20 @@
   <script src="main.js" charset="utf-8"></script>
   <script id="cardTemplate" type="text/x-handlebars-template">
     <div class="movie-card">
-    <h1>{{movieTitle}}</h1>
-    <h3>(Titolo originale: {{movieOrigTitle}})</h3>
-    <p class="lingua">
-      Lingua: {{lingua}}
-    </p>
-    <p class="voto">
-      Voto: {{voto}}
-    </p>
-    <p  class="stelle">
-      Stelle: <span id="stelle">{{stelle}}</span>
-    </p>
+      <img class="moviePoster" src="{{foto}}" alt="">
+      <h1>{{movieTitle}}</h1>
+      <h3>(Titolo originale: {{movieOrigTitle}})</h3>
+      <p class="lingua">
+        Lingua: {{lingua}}
+      </p>
+      <p class="voto">
+        Voto: {{voto}}
+      </p>
+      <p  class="stelle">
+        Stelle: <span id="stelle">{{stelle}}</span>
+      </p>
 
-  </div>
+    </div>
 
 </script>
 </body>
