@@ -15,7 +15,7 @@ h3 {
 .container {
   height: 70vh;
   width: 100vw;
-    padding: 15% 1%;
+    padding: 10% 1%;
   background-image: url('https://cache.desktopnexus.com/cropped-wallpapers/2188/2188719-1920x1080-[DesktopNexus.com].jpg?st=qTVm-jFk24DtoZ_Q1fQ24A&e=1559034788');
       max-width: 100%;
 
@@ -45,19 +45,37 @@ color: dimgray;
   height: 35px;
   cursor: pointer;
 }
-.display-result {
+.display-result, .display-serie {
   display: flex;
   flex-wrap: wrap;
-  padding: 50px;
+  padding: 30px;
+  width: 50%;
+  float: left;
 }
+.display-serie {
 
+}
 .movie-card {
    padding: 5px;
-   width: 20%
+   width: 25%;
+    height: 230px;
 }
 .moviePoster {
   width: 100%;
 }
 .flagIcon {
   width: 20px;
+}
+.hidden {
+  display: none;
+}
+.filmCard {
+  border: 3px solid darkslategrey;
+  color: white;
+  background-color: #568a8a;
+}
+.serieCard {
+  border: 7px solid #f75418;
+      color: white;
+      background-color: coral;
 }

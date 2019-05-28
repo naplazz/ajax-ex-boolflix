@@ -25,10 +25,16 @@
   <div class="display-result">
 
   </div>
+  <div class="display-serie">
+
+
+  </div>
+
   <script src="main.js" charset="utf-8"></script>
   <script id="cardTemplate" type="text/x-handlebars-template">
-    <div class="movie-card">
+    <div class="movie-card filmCard">
       <img class="moviePoster" src="{{foto}}" alt="">
+      <div class="card-details hidden">
       <h1>{{movieTitle}}</h1>
       <h3>(Titolo originale: {{movieOrigTitle}})</h3>
       <p class="lingua">
@@ -40,10 +46,30 @@
       <div  class="stelle">
         Stelle: {{{stelle}}}
       </div>
-
     </div>
+    </div>
+</script>
+  <script id="serieTemplate" type="text/x-handlebars-template">
+    <div class="movie-card serieCard">
+    <img class="moviePoster" src="{{foto}}" alt="">
+    <div class="card-details hidden">
+
+    <h1>{{movieTitle}}</h1>
+    <h3>(Titolo originale: {{movieOrigTitle}})</h3>
+    <p class="lingua">
+      Lingua: <img class="flagIcon" src="https://lipis.github.io/flag-icon-css/flags/4x3/{{lingua}}.svg" alt="">
+    </p>
+    <p class="voto">
+      Voto: {{voto}}
+    </p>
+    <div  class="stelle">
+      Stelle: {{{stelle}}}
+    </div>
+    </div>
+  </div>
 
 </script>
+
 </body>
 
 </html>
