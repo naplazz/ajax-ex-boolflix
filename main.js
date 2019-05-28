@@ -16,10 +16,17 @@ $(document).ready(function() {
         $('.display-result').empty()
         for (var i = 0; i < data.results.length; i++) {
           // hendlebars template
-          var icon = '<i class="fas fa-star"></i>'
+          var icon = '<i class="fas fa-star"></i>';
+          var iconhtml = '';
           var numeroStelle = parseInt(data.results[i].vote_average / 2);
-          var lingua = data.results[i].original_language;
-
+          if (data.results[i].original_language == "en") {
+            var lingua = 'gb';
+          } else {
+            var lingua = data.results[i].original_language;
+          }
+          for (var z = 0; z <= numeroStelle -1; z++) {
+            iconhtml = iconhtml  + icon;
+          }
           var source = document.getElementById("cardTemplate").innerHTML;
           var template = Handlebars.compile(source);
           var context = {
@@ -27,7 +34,7 @@ $(document).ready(function() {
             movieTitle: data.results[i].title,
             lingua: lingua,
             voto: data.results[i].vote_average,
-            stelle: numeroStelle,
+            stelle: iconhtml,
             foto: 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + data.results[i].backdrop_path
           };
           var html = template(context);
