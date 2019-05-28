@@ -63,7 +63,7 @@ $(document).ready(function() {
      },
      success: function(data) {
        $('.display-serie').empty()
-      
+
        for (var i = 0; i < data.results.length; i++) {
          // hendlebars template
          var icon = '<i class="fas fa-star"></i>';
@@ -97,9 +97,12 @@ $(document).ready(function() {
        $('.movie-card').hover(function() {
          /* Stuff to do when the mouse enters the element */
          $(this).find('img').hide()
+         $(this).find('.ribbon').hide()
+
          $(this).find('.card-details').toggleClass('hidden');
        }, function() {
          $(this).find('img').show()
+         $(this).find('.ribbon').show()
          $(this).find('.card-details').toggleClass('hidden');
 
        });
